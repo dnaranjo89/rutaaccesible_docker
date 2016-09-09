@@ -31,7 +31,7 @@ RUN apt-get update && apt-get install -y \
   && rm -rf /var/lib/apt/lists/*
 
 # install uwsgi now because it takes a little while
-RUN pip install uwsgi
+RUN pip install uwsgi mysql-python
 
 # setup all the configfiles
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
