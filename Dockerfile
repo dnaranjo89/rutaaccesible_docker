@@ -22,13 +22,11 @@ VOLUME ["/data"]
 
 RUN apt-get update && apt-get install -y \
 	git \
-	python \
-	python-dev \
-	python-setuptools \
 	python-pip \
 	nginx \
 	supervisor \
-	sqlite3 \
+	libmysqlclient-dev \
+    mysql-client \
   && rm -rf /var/lib/apt/lists/*
 
 # install uwsgi now because it takes a little while
