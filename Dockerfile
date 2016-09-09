@@ -37,7 +37,7 @@ RUN pip install uwsgi mysql-python
 # setup all the configfiles
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 RUN rm /etc/nginx/sites-available/default
-COPY flaskapp_uwsgi.ini /data/
+COPY flaskapp_uwsgi.ini /etc/uwsgi/
 COPY flaskapp_nginx.conf /etc/nginx/conf.d/
 COPY flaskapp_supervisor.conf /etc/supervisor/conf.d/
 
