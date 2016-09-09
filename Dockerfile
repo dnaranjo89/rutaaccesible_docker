@@ -14,11 +14,12 @@
 
 FROM ubuntu:16.04
 
-MAINTAINER Dockerfiles
+MAINTAINER David Naranjo "dnaranjo89@gmail.com"
 
 # Install required packages and remove the apt packages cache when done.
 
-VOLUME ["/data"]
+# TODO for some reason the volume is not created, it needs to be created when the container is run
+# VOLUME ["/data"]
 
 RUN apt-get update && apt-get install -y \
 	git \
